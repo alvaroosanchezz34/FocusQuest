@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FocusQuest</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            ⚔️ <span>FOCUSQUEST</span>
+            <small>Una misión a la vez</small>
+        </div>
+
+        <div class="nav-icons">
+            <button id="toggle-theme">🌙</button>
+            <button id="btn-home">🏠</button>
+            <button id="btn-user">👤</button>
+        </div>
+    </header>
+
+    <!-- ================= MAIN VIEW ================= -->
+    <main id="view-main" class="view active">
+
+        <!-- PLAYER PANEL -->
+        <section class="card player-card">
+            <div class="avatar" id="player-avatar">🧑</div>
+            <div class="player-top">
+                <span>Nivel</span>
+                <div class="hearts">♡ ♡ ♡</div>
+            </div>
+
+            <div class="xp">
+                <span>⚡ Experiencia</span>
+                <span class="xp-text">0 / 100 XP</span>
+            </div>
+
+            <div class="xp-bar">
+                <div class="xp-fill"></div>
+            </div>
+        </section>
+
+        <!-- NEW MISSION -->
+        <section class="card mission-card">
+            <div class="mission-icon">⚔️</div>
+            <h2>Nueva Misión</h2>
+            <p>Elige tu próxima batalla</p>
+            <div class="task-form">
+                <input id="task-input" type="text" placeholder="Escribe tu misión..." />
+                <select id="task-difficulty" class="difficulty-select">
+                    <option value="easy">🟢 Fácil</option>
+                    <option value="medium" selected>🟡 Media</option>
+                    <option value="hard">🔴 Difícil</option>
+                </select>
+                <button id="add-task" class="primary">Agregar misión</button>
+            </div>
+
+        </section>
+
+        <!-- LISTADO DE TAREAS -->
+        <section class="tasks">
+            <div class="task-filters">
+                <button data-filter="all" class="active">Todas</button>
+                <button data-filter="pending">Pendientes</button>
+                <button data-filter="completed">Completadas</button>
+            </div>
+
+            <ul id="task-list"></ul>
+        </section>
+
+
+        <!-- HISTORY -->
+        <section class="history">
+            <h3>🕒 Historial Reciente</h3>
+
+            <div class="history-item fail">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= USER VIEW ================= -->
+    <main id="view-user" class="view">
+
+        <section class="user-header">
+            🏆
+            <h2>Álvaro Sánchez Ortega</h2>
+            <p>alvarosanchezortega34@gmail.com</p>
+        </section>
+
+        <!-- STATS -->
+        <section class="stats">
+            <div class="stat-card">
+                ✅
+                <span>Misiones completadas</span>
+                <strong id="stat-completed">0</strong>
+            </div>
+
+            <div class="stat-card">
+                🔥
+                <span>Racha actual</span>
+                <strong id="stat-streak">0</strong>
+            </div>
+
+            <div class="stat-card">
+                📈
+                <span>Tasa de éxito</span>
+                <strong id="stat-success">0%</strong>
+            </div>
+
+            <div class="stat-card">
+                💀
+                <span>Game Overs</span>
+                <strong id="stat-gameover">0</strong>
+            </div>
+
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section class="achievements">
+            <h3>🏅 Logros</h3>
+            <div class="achievement locked" id="ach-first">🏅 Primera misión</div>
+            <div class="achievement locked" id="ach-streak5">🏅 Racha de 5</div>
+            <div class="achievement locked" id="ach-veteran">🏅 Veterano</div>
+            <div class="achievement locked" id="ach-dedicated">🏅 Guerrero dedicado</div>
+            <div class="achievement locked hidden" id="ach-perfect">
+                💎 Perfeccionista (3 seguidas sin fallar)
+            </div>
+
+            <div class="achievement locked hidden" id="ach-survivor">
+                🧠 Superviviente (llega a 1 ❤️ y recupera)
+            </div>
+
+        </section>
+
+        <!-- SUMMARY -->
+        <section class="card summary">
+            <h3>Resumen de progreso</h3>
+            <p>Total XP acumulado: <span id="sum-xp">0</span></p>
+            <p>Misiones completadas: <span id="sum-completed">0</span></p>
+            <p>Misiones falladas: <span id="sum-failed">0</span></p>
+            <p>Mejor racha: <span id="sum-best-streak">0</span></p>
+
+        </section>
+
+        <!-- RESUMEN DIARIO -->
+        <section class="card">
+            <h3>📅 Hoy</h3>
+            <p>Misiones completadas: <span id="today-completed">0</span></p>
+            <p>Misiones falladas: <span id="today-failed">0</span></p>
+            <p>XP ganado hoy: <span id="today-xp">0</span></p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        Fallar tiene consecuencias. Enfócate o pierde.
+    </footer>
+    <!-- TOAST NOTIFICATIONS -->
+    <div id="toast" class="toast hidden"></div>
+    <!-- MODAL PARA ELIMINACION -->
+    <div id="confirm-modal" class="modal hidden">
+        <div class="modal-box">
+            <h3>¿Abandonar misión?</h3>
+            <p>Esta acción tendrá consecuencias.</p>
+            <div class="modal-actions">
+                <button id="confirm-no">Cancelar</button>
+                <button id="confirm-yes" class="danger">Abandonar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
