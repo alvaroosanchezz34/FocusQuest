@@ -95,7 +95,11 @@ El usuario progresa completando misiones, ganando experiencia, subiendo de nivel
 ---
 
 ## 📸 Capturas (opcional)
-*(puedes añadir screenshots aquí si quieres)*
+<img width="1195" height="2939" alt="127 0 0 1_3000_index html_serverWindowId=255084da-991f-45a7-86c5-a0c9d2181199" src="https://github.com/user-attachments/assets/a781cbb9-7313-4399-8cd6-2c79ecca7b05" />
+<img width="1195" height="1836" alt="127 0 0 1_3000_index html_serverWindowId=255084da-991f-45a7-86c5-a0c9d2181199 (1)" src="https://github.com/user-attachments/assets/3dd6a669-7acb-4538-ac9f-3e1fade2fef6" />
+<img width="1195" height="1836" alt="127 0 0 1_3000_index html_serverWindowId=255084da-991f-45a7-86c5-a0c9d2181199 (2)" src="https://github.com/user-attachments/assets/467a3ff0-1ec2-4488-9598-89ff12cae364" />
+<img width="1195" height="2939" alt="127 0 0 1_3000_index html_serverWindowId=255084da-991f-45a7-86c5-a0c9d2181199 (3)" src="https://github.com/user-attachments/assets/b49924cf-567b-40fd-8781-1615412f3439" />
+
 
 ---
 
