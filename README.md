@@ -69,9 +69,6 @@ El usuario progresa completando misiones, ganando experiencia, subiendo de nivel
 ├── script.js
 └── README.md
 
-yaml
-Copiar código
-
 ---
 
 ## ▶️ Cómo usar la aplicación
@@ -112,4 +109,4 @@ Proyecto realizado como práctica de JavaScript para el módulo de Desarrollo We
 
 ## 📄 Licencia
 
-Uso educativo.
+Código de uso líbre.
