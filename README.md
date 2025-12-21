@@ -107,7 +107,7 @@ El usuario progresa completando misiones, ganando experiencia, subiendo de nivel
 
 **Álvaro Sánchez Ortega**
 
-Proyecto realizado como práctica de JavaScript para el módulo de Desarrollo Web.
+Proyecto realizado como práctica de JavaScript para ampliación del portfolio personal.
 
 ---
 
