@@ -242,9 +242,9 @@ function renderTask(task) {
         ${task.difficulty.toUpperCase()}
     </span>
 
-    <div>
-        <button class="complete">✅</button>
-        <button class="delete">❌</button>
+    <div class="task-actions">
+        <button class="btn complete">✅</button>
+        <button class="btn delete">❌</button>
     </div>`;
 
     // Completar misión → gana XP
