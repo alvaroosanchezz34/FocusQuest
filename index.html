@@ -18,7 +18,8 @@
     <!-- NAVBAR -->
     <header class="navbar">
         <div class="logo">
-            ⚔️ <span>FOCUSQUEST</span>
+            <img src="https://res.cloudinary.com/dhbjoltyy/image/upload/v1766937256/ChatGPT_Image_28_dic_2025__16_48_34-removebg-preview_wcwkew.png"
+                alt="logo">
             <small>Una misión a la vez</small>
         </div>
 
@@ -53,8 +54,8 @@
         <!-- NEW MISSION -->
         <section class="card mission-card">
             <div class="mission-icon">⚔️</div>
-            <h2>Nueva Misión</h2>
-            <p>Elige tu próxima batalla</p>
+            <h2>Nueva Batalla</h2>
+            <p>Preparate para el combate</p>
             <div class="task-form">
                 <input id="task-input" type="text" placeholder="Escribe tu misión..." />
                 <select id="task-difficulty" class="difficulty-select">
@@ -62,7 +63,7 @@
                     <option value="medium" selected>🟡 Media</option>
                     <option value="hard">🔴 Difícil</option>
                 </select>
-                <button id="add-task" class="primary">Agregar misión</button>
+                <button id="add-task" class="primary">Iniciar misión</button>
             </div>
 
         </section>
@@ -71,17 +72,23 @@
         <section class="tasks">
             <div class="task-filters">
                 <button data-filter="all" class="active">Todas</button>
-                <button data-filter="pending">Pendientes</button>
-                <button data-filter="completed">Completadas</button>
+                <button data-filter="pending">En Curso</button>
+                <button data-filter="completed">Victorias</button>
             </div>
 
             <ul id="task-list"></ul>
+
+            <div id="empty-state" class="empty-state hidden">
+                ⚔️ No hay misiones activas<br>
+                <small>Elige tu próxima batalla</small>
+            </div>
+
         </section>
 
 
         <!-- HISTORY -->
         <section class="history">
-            <h3>🕒 Historial Reciente</h3>
+            <h3>🕒 Registro de batallas</h3>
 
             <div class="history-item fail">
             </div>
@@ -179,6 +186,8 @@
             </div>
         </div>
     </div>
+    <div id="xp-float" class="xp-float hidden">+20 XP</div>
+
 
     <script src="script.js"></script>
 </body>

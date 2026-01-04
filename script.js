@@ -219,6 +219,7 @@ addTaskBtn.addEventListener("click", () => {
 
     tasks.push(task);
     saveTasks();
+    updateEmptyState();
     renderTask(task);
 
     taskInput.value = "";
@@ -261,7 +262,9 @@ function renderTask(task) {
             todayStats.xp += reward;
             saveDailyStats();
             gainXP(reward);
+            showXP(reward);
             applyFilter();
+            updateEmptyState();
             addHistoryEvent(task.text, "success", `+${reward} XP`);
             checkAchievements();
             saveTasks();
@@ -540,6 +543,7 @@ confirmYes.addEventListener("click", () => {
         const todayStats = getTodayStats();
         todayStats.failed++;
         saveDailyStats();
+        updateEmptyState();
 
         for (let i = 0; i < penalty; i++) {
             loseLife();
@@ -673,4 +677,20 @@ function activatePunishment() {
             showToast("🔓 Castigo terminado. Vuelve al combate.");
         }
     }, 1000);
+}
+
+const xpFloat = document.getElementById("xp-float");
+
+function showXP(amount) {
+    xpFloat.textContent = `+${amount} XP`;
+    xpFloat.classList.remove("hidden");
+
+    setTimeout(() => {
+        xpFloat.classList.add("hidden");
+    }, 1000);
+}
+
+function updateEmptyState() {
+    const emptyState = document.getElementById("empty-state");
+    emptyState.classList.toggle("hidden", tasks.length > 0);
 }

@@ -34,20 +34,19 @@ body {
 /* NAVBAR */
 .navbar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     border-bottom: 1px solid #1f1f2e;
+    min-height: 72px;
 }
 
-.logo span {
-    font-weight: bold;
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.logo small {
-    display: block;
-    color: var(--muted);
-    font-size: 0.7rem;
-}
 
 .nav-icons button {
     background: none;
@@ -111,9 +110,10 @@ body {
 
 .xp-fill {
     height: 100%;
-    width: 40%;
     background: var(--purple);
+    transition: width 0.4s ease;
 }
+
 
 /* MISSION */
 .mission-card {
@@ -470,8 +470,8 @@ input:disabled {
 }
 
 .task-actions .btn {
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -509,4 +509,76 @@ input:disabled {
 
 .btn.fail:active {
     transform: scale(0.95);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 320px;
+}
+
+.logo img {
+    height: 70px;       /* controla el header */
+    width: auto;        /* mantiene proporción */
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+.logo small {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-top: 0.15rem;
+}
+
+@media (max-width: 600px) {
+    .logo span,
+    .logo small {
+        display: none;
+    }
+}
+
+.xp-float {
+    position: fixed;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--purple);
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 1;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.xp-float.hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+    pointer-events: none;
+}
+
+.empty-state {
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.empty-state small {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.empty-state.hidden {
+    display: none;
 }
